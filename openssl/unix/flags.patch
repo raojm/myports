@@ -1,0 +1,15 @@
+diff --git a/Configurations/unix-Makefile.tmpl b/Configurations/unix-Makefile.tmpl
+index 110ba0687d..ecb51dc32a 100644
+--- a/Configurations/unix-Makefile.tmpl
++++ b/Configurations/unix-Makefile.tmpl
+@@ -376,7 +376,7 @@ CNF_CPPFLAGS={- our $cppflags2 =
+                               (map { "-I".$_} @{$target{includes}},
+                                               @{$config{includes}}),
+                               @{$config{cppflags}}) -}
+-CNF_CFLAGS={- join(' ', $target{cflags} || (),
++#CNF_CFLAGS={- join(' ', $target{cflags} || (),
+                         @{$config{cflags}}) -}
+ CNF_CXXFLAGS={- join(' ', $target{cxxflags} || (),
+                           @{$config{cxxflags}}) -}
+-- 
+2.31.0
